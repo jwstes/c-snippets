@@ -1,0 +1,18 @@
+            //Basic functions of IO and Threadings
+            
+            string filename = "";
+            string extention = "";
+            string filetext = "Text inside a file";
+            var getusername = Environment.UserName; //Environment.UserName | to get the username of current windows user
+
+            string path = @"C:\Users\" + Environment.UserName + @"\Desktop\" + filename + extention;
+
+            File.WriteAllText(filetext, path); //Make a file with the contents of 'filetext' in 'path'
+
+            string contents;
+
+            contents = File.ReadAllText(path); //Reads all the contents of the file and outputs to contents
+
+            Console.WriteLine(contents); //Displaying the content of 'filetext' in 'path'
+
+            System.Threading.Thread.Sleep(1000); //DELAY FOR 1000ms
