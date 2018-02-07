@@ -1,0 +1,15 @@
+
+using System.Net; //USE THIS
+using System.Net.Sockets; //USE THIS
+
+        static string text = ""; //PACKETS TO SEND
+        static IPAddress ipAddr = IPAddress.None; //MAKING THE IPAddress OBJECT AND SAYING IT EQUALS NOTHING.
+        static int port = 00; //MAKING AN INTEGER AND MAKING IT A PLACEHOLDER WITH 2 DIGITS
+
+
+                new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp).SendTo(Encoding.ASCII.GetBytes(text), 
+                    new IPEndPoint(ipAddr, port));
+                    
+        // Creating a Socket and a Packet containing the data from text.
+
+     
