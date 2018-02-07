@@ -1,0 +1,17 @@
+Using System.Net; //has Ipaddress
+Using System.NetworkInformation; //the one that has Ping
+            
+            // Making an IPAddress Object and saying it has no ip.
+            IPAddress ip = IPAddress.None;
+            //User Input an ip address
+            ip = IPAddress.Parse(Console.ReadLine());
+
+            //Creating an Ping object 
+            Ping ping = new Ping();
+
+            //Creating a PingReply object to get the reply from the ping 
+            //and declaring that it sends a ping every 1000ms to the ipaddress provided in ip
+            PingReply reply = ping.Send(ip, 1000);
+
+            //Write the reply 
+            Console.WriteLine(reply.Status.ToString());
