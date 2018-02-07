@@ -1,0 +1,18 @@
+            //Making a pool of characters that the Random Generator will read from.
+            char[] letters = "abcdefghijklmnop123456789".ToCharArray();
+
+            //Creating a Random object.
+            Random r = new Random();
+
+            //Creating an Placeholder object with an empty value.
+            string randomString = "";
+
+            //50 is the lenght of the random generated string.
+            for (int i = 0; i < 50; i++)
+            {
+                //Generating random text and outputting it to the placeholder
+                randomString += letters[r.Next(0, letters.Length)].ToString();
+            }
+
+            //displaying the placeholder's data
+            Console.WriteLine(randomString);
