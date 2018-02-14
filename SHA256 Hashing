@@ -25,7 +25,7 @@ namespace hashiewashie
 
         public static string GetHash(string input)
         {
-            HashAlgorithm algorithm = SHA256.Create(); //MAKING THE HASH OBJECT AND SPECIFYING THE HASHING METHOD
+            HashAlgorithm algorithm = SHA256.Create(); //MAKING THE HASH OBJECT AND SPECIFYING THE HASHING METHOD.
 
             //CALCULATES AND RETURNS THE HASH TO STRING INPUT
             return BitConverter.ToString(algorithm.ComputeHash(Encoding.UTF8.GetBytes(input))).Replace("-", String.Empty); 
