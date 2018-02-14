@@ -1,0 +1,37 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Security.Cryptography;
+
+
+namespace hashiewashie
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine(GetHash("text right here"));
+
+            Console.WriteLine(GetHash(Console.ReadLine()));
+
+            while (true) //PREVENT FROM CLOSING
+            {
+                
+            }
+        }
+
+        public static string GetHash(string input)
+        {
+            HashAlgorithm algorithm = SHA256.Create(); //MAKING THE HASH OBJECT AND SPECIFYING THE HASHING METHOD
+
+            //CALCULATES AND RETURNS THE HASH TO STRING INPUT
+            return BitConverter.ToString(algorithm.ComputeHash(Encoding.UTF8.GetBytes(input))).Replace("-", String.Empty); 
+
+        }
+
+
+    }
+}
