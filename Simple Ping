@@ -1,7 +1,7 @@
 Using System.Net; //has Ipaddress
 Using System.NetworkInformation; //the one that has Ping
             
-            // Making an IPAddress Object and saying it has no ip.
+            // Making an IPAddress Object and saying it has no ip
             IPAddress ip = IPAddress.None;
             //User Input an ip address
             ip = IPAddress.Parse(Console.ReadLine());
