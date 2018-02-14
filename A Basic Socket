@@ -10,6 +10,6 @@ using System.Net.Sockets; //USE THIS
                 new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp).SendTo(Encoding.ASCII.GetBytes(text), 
                     new IPEndPoint(ipAddr, port));
                     
-        // Creating a Socket and a Packet containing the data from text.
+        // Creating a Socket and a Packet containing the data from text
 
      
