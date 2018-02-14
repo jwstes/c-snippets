@@ -1,4 +1,4 @@
-            //Making a pool of characters that the Random Generator will read from.
+            //Making a pool of characters that the Random Generator will read from
             char[] letters = "abcdefghijklmnop123456789".ToCharArray();
 
             //Creating a Random object.
