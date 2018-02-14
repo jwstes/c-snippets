@@ -13,6 +13,6 @@
 
             contents = File.ReadAllText(path); //Reads all the contents of the file and outputs to contents
 
-            Console.WriteLine(contents); //Displaying the content of 'filetext' in 'path'
+            Console.WriteLine(contents); //Displaying the content of 'filetext' in 'path'.
 
             System.Threading.Thread.Sleep(1000); //DELAY FOR 1000ms
