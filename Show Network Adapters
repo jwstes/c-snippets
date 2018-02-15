@@ -1,0 +1,29 @@
+using System.Net;
+
+private void ListAdapters_Click(object sender, EventArgs e)
+        {
+        
+        
+
+            IPHostEntry host; //Make a new placeholder for IP host address informations
+
+            string localIP;
+
+            host = Dns.GetHostEntry(Dns.GetHostName()); //Host = Resolve a hostname/ip address in local computer
+
+            foreach (IPAddress ip in host.AddressList) // for every ip addresses in host's address list
+            {
+                //if (ip.AddressFamily.ToString() == "InterNetwork") //UNCOMMENT THIS IF YOU WANT TO SEE IPV6 ADDRESSES TOO
+                //{
+
+                    localIP = ip.ToString();
+                    listBox1.Items.Add(localIP); //Use ur own method
+
+               // }
+
+            }
+
+
+
+
+        }
