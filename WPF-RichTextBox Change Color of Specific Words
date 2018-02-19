@@ -1,0 +1,22 @@
+private void RichTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            this.CheckKeyword("BannedWord", Color.Red, 0);
+            
+        }
+
+ private void CheckKeyword(string word, Color color, int startIndex)
+        {
+            if (this.RichTextBox1.Text.Contains(word))
+            {
+                int index = -1;
+                int selectStart = this.RichTextBox1.SelectionStart;
+
+                while ((index = this.RichTextBox1.Text.IndexOf(word, (index + 1))) != -1)
+                {
+                    this.RichTextBox1.Select((index + startIndex), word.Length);
+                    this.RichTextBox1.SelectionColor = color;
+                    this.RichTextBox1.Select(selectStart, 0);
+                    this.RichTextBox1.SelectionColor = Color.Black;
+                }
+            }
+        }
