@@ -1,0 +1,38 @@
+        static void ListAll(string path)
+        {
+            string[] files = Directory.GetFiles(path);
+            string[] dirs = Directory.GetDirectories(path);
+            StringBuilder filess = new StringBuilder();
+            foreach (string file in files)
+            {
+                filess.Append(file);
+            }
+            filess.Replace(path, "\n");
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine("Files:");
+            Console.ResetColor();
+            Console.WriteLine(filess);
+            StringBuilder dirss = new StringBuilder();
+            foreach (string dir in dirs)
+            {
+                dirss.Append(dir);
+            }
+            dirss.Replace(path, "\n");
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine("Folders:");
+            Console.ResetColor();
+            Console.WriteLine(dirss);
+        }
+
+        static void DeleteAll(string path)
+        {
+            DirectoryInfo di = new DirectoryInfo(path);
+            foreach (FileInfo file in di.GetFiles())
+            {
+                file.Delete();
+            }
+            foreach (DirectoryInfo dir in di.GetDirectories())
+            {
+                dir.Delete(true);
+            }
+        }
