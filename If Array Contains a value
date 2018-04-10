@@ -1,0 +1,9 @@
+                  int pos = Array.IndexOf(array of things, value);
+                    if (pos > -1)
+                    {
+                          this means it contains.
+                    }
+                    else
+                    {
+                          this means it doesnt contain
+                    }
